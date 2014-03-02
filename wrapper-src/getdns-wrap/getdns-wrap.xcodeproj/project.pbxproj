@@ -8,25 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		EF8D30EA18C2C17900CC0AF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D30E918C2C17900CC0AF7 /* Foundation.framework */; };
-		EF8D30EF18C2C17900CC0AF7 /* getdns_wrap.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EF8D30EE18C2C17900CC0AF7 /* getdns_wrap.h */; };
-		EF8D30F118C2C17900CC0AF7 /* getdns_wrap.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8D30F018C2C17900CC0AF7 /* getdns_wrap.m */; };
-		EF8D30F818C2C17900CC0AF7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D30F718C2C17900CC0AF7 /* XCTest.framework */; };
-		EF8D30F918C2C17900CC0AF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D30E918C2C17900CC0AF7 /* Foundation.framework */; };
-		EF8D30FB18C2C17900CC0AF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D30FA18C2C17900CC0AF7 /* UIKit.framework */; };
-		EF8D30FE18C2C17A00CC0AF7 /* libgetdns-wrap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D30E618C2C17900CC0AF7 /* libgetdns-wrap.a */; };
-		EF8D310418C2C17A00CC0AF7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF8D310218C2C17A00CC0AF7 /* InfoPlist.strings */; };
-		EF8D310618C2C17A00CC0AF7 /* getdns_wrapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8D310518C2C17A00CC0AF7 /* getdns_wrapTests.m */; };
+		EF8D311318C2C1EA00CC0AF7 /* GDNSContext.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8D311018C2C1EA00CC0AF7 /* GDNSContext.m */; };
+		EF8D311418C2C1EA00CC0AF7 /* GDNSUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8D311218C2C1EA00CC0AF7 /* GDNSUtil.m */; };
+		EF8D311618C2C26100CC0AF7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D311518C2C26100CC0AF7 /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		EF8D30FC18C2C17A00CC0AF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EF8D30DE18C2C17900CC0AF7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EF8D30E518C2C17900CC0AF7;
-			remoteInfo = "getdns-wrap";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		EF8D30E418C2C17900CC0AF7 /* CopyFiles */ = {
@@ -35,7 +20,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				EF8D30EF18C2C17900CC0AF7 /* getdns_wrap.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,15 +28,11 @@
 /* Begin PBXFileReference section */
 		EF8D30E618C2C17900CC0AF7 /* libgetdns-wrap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libgetdns-wrap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8D30E918C2C17900CC0AF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		EF8D30ED18C2C17900CC0AF7 /* getdns-wrap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "getdns-wrap-Prefix.pch"; sourceTree = "<group>"; };
-		EF8D30EE18C2C17900CC0AF7 /* getdns_wrap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = getdns_wrap.h; sourceTree = "<group>"; };
-		EF8D30F018C2C17900CC0AF7 /* getdns_wrap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = getdns_wrap.m; sourceTree = "<group>"; };
-		EF8D30F618C2C17900CC0AF7 /* getdns-wrapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "getdns-wrapTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF8D30F718C2C17900CC0AF7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		EF8D30FA18C2C17900CC0AF7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		EF8D310118C2C17A00CC0AF7 /* getdns-wrapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "getdns-wrapTests-Info.plist"; sourceTree = "<group>"; };
-		EF8D310318C2C17A00CC0AF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		EF8D310518C2C17A00CC0AF7 /* getdns_wrapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = getdns_wrapTests.m; sourceTree = "<group>"; };
+		EF8D310F18C2C1EA00CC0AF7 /* GDNSContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDNSContext.h; path = ../GDNSContext.h; sourceTree = "<group>"; };
+		EF8D311018C2C1EA00CC0AF7 /* GDNSContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDNSContext.m; path = ../GDNSContext.m; sourceTree = "<group>"; };
+		EF8D311118C2C1EA00CC0AF7 /* GDNSUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDNSUtil.h; path = ../GDNSUtil.h; sourceTree = "<group>"; };
+		EF8D311218C2C1EA00CC0AF7 /* GDNSUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDNSUtil.m; path = ../GDNSUtil.m; sourceTree = "<group>"; };
+		EF8D311518C2C26100CC0AF7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,18 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8D311618C2C26100CC0AF7 /* CFNetwork.framework in Frameworks */,
 				EF8D30EA18C2C17900CC0AF7 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EF8D30F318C2C17900CC0AF7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EF8D30F818C2C17900CC0AF7 /* XCTest.framework in Frameworks */,
-				EF8D30FB18C2C17900CC0AF7 /* UIKit.framework in Frameworks */,
-				EF8D30FE18C2C17A00CC0AF7 /* libgetdns-wrap.a in Frameworks */,
-				EF8D30F918C2C17900CC0AF7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,8 +51,10 @@
 		EF8D30DD18C2C17900CC0AF7 = {
 			isa = PBXGroup;
 			children = (
-				EF8D30EB18C2C17900CC0AF7 /* getdns-wrap */,
-				EF8D30FF18C2C17A00CC0AF7 /* getdns-wrapTests */,
+				EF8D310F18C2C1EA00CC0AF7 /* GDNSContext.h */,
+				EF8D311018C2C1EA00CC0AF7 /* GDNSContext.m */,
+				EF8D311118C2C1EA00CC0AF7 /* GDNSUtil.h */,
+				EF8D311218C2C1EA00CC0AF7 /* GDNSUtil.m */,
 				EF8D30E818C2C17900CC0AF7 /* Frameworks */,
 				EF8D30E718C2C17900CC0AF7 /* Products */,
 			);
@@ -92,7 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				EF8D30E618C2C17900CC0AF7 /* libgetdns-wrap.a */,
-				EF8D30F618C2C17900CC0AF7 /* getdns-wrapTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,47 +71,10 @@
 		EF8D30E818C2C17900CC0AF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF8D311518C2C26100CC0AF7 /* CFNetwork.framework */,
 				EF8D30E918C2C17900CC0AF7 /* Foundation.framework */,
-				EF8D30F718C2C17900CC0AF7 /* XCTest.framework */,
-				EF8D30FA18C2C17900CC0AF7 /* UIKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EF8D30EB18C2C17900CC0AF7 /* getdns-wrap */ = {
-			isa = PBXGroup;
-			children = (
-				EF8D30EE18C2C17900CC0AF7 /* getdns_wrap.h */,
-				EF8D30F018C2C17900CC0AF7 /* getdns_wrap.m */,
-				EF8D30EC18C2C17900CC0AF7 /* Supporting Files */,
-			);
-			path = "getdns-wrap";
-			sourceTree = "<group>";
-		};
-		EF8D30EC18C2C17900CC0AF7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				EF8D30ED18C2C17900CC0AF7 /* getdns-wrap-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		EF8D30FF18C2C17A00CC0AF7 /* getdns-wrapTests */ = {
-			isa = PBXGroup;
-			children = (
-				EF8D310518C2C17A00CC0AF7 /* getdns_wrapTests.m */,
-				EF8D310018C2C17A00CC0AF7 /* Supporting Files */,
-			);
-			path = "getdns-wrapTests";
-			sourceTree = "<group>";
-		};
-		EF8D310018C2C17A00CC0AF7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				EF8D310118C2C17A00CC0AF7 /* getdns-wrapTests-Info.plist */,
-				EF8D310218C2C17A00CC0AF7 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,24 +96,6 @@
 			productName = "getdns-wrap";
 			productReference = EF8D30E618C2C17900CC0AF7 /* libgetdns-wrap.a */;
 			productType = "com.apple.product-type.library.static";
-		};
-		EF8D30F518C2C17900CC0AF7 /* getdns-wrapTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EF8D310C18C2C17A00CC0AF7 /* Build configuration list for PBXNativeTarget "getdns-wrapTests" */;
-			buildPhases = (
-				EF8D30F218C2C17900CC0AF7 /* Sources */,
-				EF8D30F318C2C17900CC0AF7 /* Frameworks */,
-				EF8D30F418C2C17900CC0AF7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EF8D30FD18C2C17A00CC0AF7 /* PBXTargetDependency */,
-			);
-			name = "getdns-wrapTests";
-			productName = "getdns-wrapTests";
-			productReference = EF8D30F618C2C17900CC0AF7 /* getdns-wrapTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -203,59 +119,21 @@
 			projectRoot = "";
 			targets = (
 				EF8D30E518C2C17900CC0AF7 /* getdns-wrap */,
-				EF8D30F518C2C17900CC0AF7 /* getdns-wrapTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		EF8D30F418C2C17900CC0AF7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EF8D310418C2C17A00CC0AF7 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF8D30E218C2C17900CC0AF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF8D30F118C2C17900CC0AF7 /* getdns_wrap.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EF8D30F218C2C17900CC0AF7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EF8D310618C2C17A00CC0AF7 /* getdns_wrapTests.m in Sources */,
+				EF8D311318C2C1EA00CC0AF7 /* GDNSContext.m in Sources */,
+				EF8D311418C2C1EA00CC0AF7 /* GDNSUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		EF8D30FD18C2C17A00CC0AF7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EF8D30E518C2C17900CC0AF7 /* getdns-wrap */;
-			targetProxy = EF8D30FC18C2C17A00CC0AF7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		EF8D310218C2C17A00CC0AF7 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EF8D310318C2C17A00CC0AF7 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EF8D310718C2C17A00CC0AF7 /* Debug */ = {
@@ -333,7 +211,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/getdns_wrap.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "getdns-wrap/getdns-wrap-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -345,48 +223,10 @@
 			buildSettings = {
 				DSTROOT = /tmp/getdns_wrap.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "getdns-wrap/getdns-wrap-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		EF8D310D18C2C17A00CC0AF7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "getdns-wrap/getdns-wrap-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "getdns-wrapTests/getdns-wrapTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		EF8D310E18C2C17A00CC0AF7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "getdns-wrap/getdns-wrap-Prefix.pch";
-				INFOPLIST_FILE = "getdns-wrapTests/getdns-wrapTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -407,14 +247,6 @@
 			buildConfigurations = (
 				EF8D310A18C2C17A00CC0AF7 /* Debug */,
 				EF8D310B18C2C17A00CC0AF7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		EF8D310C18C2C17A00CC0AF7 /* Build configuration list for PBXNativeTarget "getdns-wrapTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EF8D310D18C2C17A00CC0AF7 /* Debug */,
-				EF8D310E18C2C17A00CC0AF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

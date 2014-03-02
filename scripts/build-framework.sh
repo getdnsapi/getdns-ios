@@ -4,46 +4,45 @@ source settings.env
 
 ./build-libs.sh
 
-LINK_LIBS="-lgetdns -lldns -lidn -lunbound"
-
-# build the framework
+# build the ios wrapper
 for ARCH in ${ARCHS[@]}
 do
     if [ "${ARCH}" == "i386" ];
     then
-        PLATFORM="iPhoneSimulator"
         SDK="iphonesimulator"
-        EXTRA_FLAGS="-miphoneos-version-min=${IOS_VERS}"
-        LIB_LDFLAGS="${LIB_LDFLAGS} -miphoneos-version-min=${IOS_VERS}"
     else
-        PLATFORM="iPhoneOS"
         SDK="iphoneos"
-        EXTRA_FLAGS="-mthumb-interwork"
     fi
-
-    if [ "${ARCH}" == "arm64" ];
-    then
-        HOST_PREFIX="arm"
+    export OTHER_CFLAGS="-I${INSTALL_PREFIX}/${ARCH}/include"
+    OUT_DIR="${INSTALL_PREFIX}/${ARCH}/lib"
+    cd ${WRAPPER_SRC}/getdns-wrap
+    xcodebuild -arch ${ARCH} -sdk ${SDK}${IOS_VERS} CONFIGURATION_BUILD_DIR=${OUT_DIR}
+    if [ ! -e ${INSTALL_PREFIX}/${ARCH}/lib/libgetdns-wrap.a ]; then
+        echo "Failed to build wrapper for ${ARCH}"
+        exit 1
     fi
-
-    LIB_CFLAGS="${LIB_CFLAGS} -I${INSTALL_PREFIX}/${ARCH}/include"
-    LIB_LDFLAGS="${LIB_LDFLAGS} -L${INSTALL_PREFIX}/${ARCH}/lib ${LINK_LIBS}"
-
-    DEVROOT="${XCODE_DEV}/Platforms/${PLATFORM}.platform/Developer"
-    SDKROOT="${DEVROOT}/SDKs/${PLATFORM}${IOS_VERS}.sdk"
-
-    export EXTRA_CFLAGS="-fobjc-arc -arch ${ARCH} -pipe -Os -gdwarf-2 -isysroot ${SDKROOT} ${EXTRA_FLAGS} ${LIB_CFLAGS}"
-    export EXTRA_LDFLAGS="-arch ${ARCH} -isysroot ${SDKROOT} ${LIB_LDFLAGS}"
-    export CXXFLAGS="${CFLAGS}"
-    export CC=$(xcrun -sdk ${SDK} -find gcc)
-    export LD=$(xcrun -sdk ${SDK} -find ld)
-    export CXX=$(xcrun -sdk ${SDK} -find g++)
-    unset AR
-    unset AS
-    export NM=$(xcrun -sdk ${SDK} -find nm)
-    export RANLIB=$(xcrun -sdk ${SDK} -find ranlib)
-
-    cd ${WRAPPER_SRC}
-    make
-
 done
+
+# build a giant static lib for each arch
+LIPO_ARGS=""
+for ARCH in ${ARCHS[@]}
+do
+    libtool -static -o ${INSTALL_PREFIX}/libgetdns-ios.${ARCH}.a ${INSTALL_PREFIX}/${ARCH}/lib/*.a
+    LIPO_ARGS="${LIPO_ARGS} ${INSTALL_PREFIX}/libgetdns-ios.${ARCH}.a"
+done
+
+# now lipo them all together!
+lipo ${LIPO_ARGS} -output ${INSTALL_PREFIX}/libgetdns-ios.a -create
+
+echo "Building the framework... finally"
+tar -xf ${DIR}/Canonical.framework.tar -C ${INSTALL_PREFIX}
+mv "${INSTALL_PREFIX}/Canonical.framework" "${INSTALL_PREFIX}/${FRAMEWORK_NAME}.framework"
+
+mv "${INSTALL_PREFIX}/libgetdns-ios.a"  "${INSTALL_PREFIX}/${FRAMEWORK_NAME}.framework/Versions/A/getdns"
+# why does this work?
+ln -s "Versions/A/getdns" "${INSTALL_PREFIX}/${FRAMEWORK_NAME}.framework/"
+cp -r "${INSTALL_PREFIX}/i386/include/getdns/*.h" "${INSTALL_PREFIX}/${FRAMEWORK_NAME}.framework/Versions/A/Headers/"
+
+/usr/libexec/PlistBuddy -c "Set :CFBundleVersion ${FRAMEWORK_VERSION}" "${INSTALL_PREFIX}/${FRAMEWORK_NAME}.framework/Versions/A/Resources/Info.plist"
+/usr/libexec/PlistBuddy -c "Set :CFBundleIdentifier ${FRAMEWORK_IDENTIFIER}" "${INSTALL_PREFIX}/${FRAMEWORK_NAME}.framework/Versions/A/Resources/Info.plist"
+
