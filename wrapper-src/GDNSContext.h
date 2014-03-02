@@ -35,31 +35,39 @@ struct getdns_dict;
 }
 
 @property (nonatomic, readonly) struct getdns_context* context;
+@property (nonatomic, readonly) BOOL destroyed;
 
 // callback
-typedef int (^GDNSCallback)(GDNSContext*, uint16_t,
-                            struct getdns_dict*,
-                            uint64_t);
+typedef void (^GDNSCallback)(GDNSContext* context, uint16_t callback_type,
+                            struct getdns_dict* response,
+                            uint64_t transaction_id);
 
--(id)initWithSettings:(BOOL)isStub
-         withResolvers:(NSArray*)resolverIps;
+// Create a context.  If isStub is false, acts as recursive.
+// if isStub is true, then uses either resolverIps or network setting resolvers
+// as the upstreams
+-(id)initAsStub:(BOOL)isStub
+  withResolvers:(NSArray*)resolverIps;
 
+// analogous to getdns_general
 -(int)lookup:(NSString*)name
        ofType:(uint16_t)request_type
       withExt:(NSDictionary*)extensions
       transId:(uint64_t*)tId
      callback:(GDNSCallback)cb;
 
+// analogous to getdns_address
 -(int)address:(NSString*)name
        withExt:(NSDictionary*)extensions
        transId:(uint64_t*)tId
       callback:(GDNSCallback)cb;
 
+// analogous to getdns_hostname
 -(int)hostname:(NSString*)address
         withExt:(NSDictionary*)extensions
         transId:(uint64_t*)tId
        callback:(GDNSCallback)cb;
 
+// analogous to getdns_service
 -(int)service:(NSString*)address
        withExt:(NSDictionary*)extensions
        transId:(uint64_t*)tId

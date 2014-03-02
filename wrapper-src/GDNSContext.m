@@ -50,9 +50,10 @@
 @implementation GDNSContext
 
 @synthesize context = context_;
+@synthesize destroyed = destroyed_;
 
--(id)initWithSettings:(BOOL)isStub
-        withResolvers:(NSArray*)resolverIps {
+-(id)initAsStub:(BOOL)isStub
+  withResolvers:(NSArray*)resolverIps {
     self = [super init];
     if (self) {
         context_ = NULL;
@@ -71,12 +72,20 @@
             context_ = NULL;
             self = nil;
         }
+        if (![GDNSUtil attachEventLoop:self]) {
+            getdns_context_destroy(context_);
+            context_ = NULL;
+            self = nil;
+        }
     }
     return self;
 }
 
 -(void)dealloc {
-    getdns_context_destroy(context_);
+    // hacky solution - event loop socket triggers during destroy
+    getdns_context* ctx = context_;
+    context_ = NULL;
+    getdns_context_destroy(ctx);
 }
 
 -(CallbackData*)createCallbackData:(GDNSCallback)cb {
@@ -92,9 +101,11 @@ void getdns_cb(getdns_context *context,
                void *userarg,
                getdns_transaction_t tid)
 {
-    CallbackData* cbData = (__bridge CallbackData*)userarg;
-    cbData.callback(cbData.context, callbackType,
-                    response, tid);
+    CallbackData* cbData = (__bridge_transfer CallbackData*)userarg;
+    @autoreleasepool {
+        cbData.callback(cbData.context, callbackType,
+                        response, tid);
+    }
 }
 
 -(int)lookup:(NSString*)name
@@ -105,7 +116,7 @@ void getdns_cb(getdns_context *context,
     CallbackData* userarg = [self createCallbackData:cb];
     getdns_dict* ext = [GDNSUtil convertToDict:extensions];
     int r = getdns_general(context_, [name UTF8String], request_type,
-                   ext, (__bridge void *)userarg,
+                   ext, (__bridge_retained void *)userarg,
                    tId, getdns_cb);
     getdns_dict_destroy(ext);
     return r;
@@ -118,7 +129,7 @@ void getdns_cb(getdns_context *context,
     CallbackData* userarg = [self createCallbackData:cb];
     getdns_dict* ext = [GDNSUtil convertToDict:extensions];
     int r = getdns_address(context_, [name UTF8String],
-                           ext, (__bridge void *)userarg,
+                           ext, (__bridge_retained void *)userarg,
                            tId, getdns_cb);
     getdns_dict_destroy(ext);
     return r;
@@ -132,7 +143,7 @@ void getdns_cb(getdns_context *context,
     getdns_dict* ext = [GDNSUtil convertToDict:extensions];
     getdns_dict* addr = [GDNSUtil convertIpStr:address];
     int r = getdns_hostname(context_, addr,
-                            ext, (__bridge void *)userarg,
+                            ext, (__bridge_retained void *)userarg,
                             tId, getdns_cb);
     getdns_dict_destroy(ext);
     getdns_dict_destroy(addr);
@@ -146,7 +157,7 @@ void getdns_cb(getdns_context *context,
     CallbackData* userarg = [self createCallbackData:cb];
     getdns_dict* ext = [GDNSUtil convertToDict:extensions];
     int r = getdns_service(context_, [name UTF8String],
-                           ext, (__bridge void *)userarg,
+                           ext, (__bridge_retained void *)userarg,
                            tId, getdns_cb);
     getdns_dict_destroy(ext);
     return r;

@@ -33,6 +33,7 @@
 		EF8D311118C2C1EA00CC0AF7 /* GDNSUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDNSUtil.h; path = ../GDNSUtil.h; sourceTree = "<group>"; };
 		EF8D311218C2C1EA00CC0AF7 /* GDNSUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDNSUtil.m; path = ../GDNSUtil.m; sourceTree = "<group>"; };
 		EF8D311518C2C26100CC0AF7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EF8D315F18C2DAA300CC0AF7 /* GDNS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDNS.h; path = ../GDNS.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +52,7 @@
 		EF8D30DD18C2C17900CC0AF7 = {
 			isa = PBXGroup;
 			children = (
+				EF8D315F18C2DAA300CC0AF7 /* GDNS.h */,
 				EF8D310F18C2C1EA00CC0AF7 /* GDNSContext.h */,
 				EF8D311018C2C1EA00CC0AF7 /* GDNSContext.m */,
 				EF8D311118C2C1EA00CC0AF7 /* GDNSUtil.h */,
@@ -249,6 +251,7 @@
 				EF8D310B18C2C17A00CC0AF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

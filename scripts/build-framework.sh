@@ -37,7 +37,7 @@ done
 # now lipo them all together!
 lipo ${LIPO_ARGS} -output ${INSTALL_PREFIX}/libgetdns-ios.a -create
 
-echo "Building the framework..."
+echo "Building the framework"
 tar -xf ${DIR}/Canonical.framework.tar -C ${INSTALL_PREFIX}
 mv "${INSTALL_PREFIX}/Canonical.framework" "${INSTALL_PREFIX}/${FRAMEWORK_NAME}.framework"
 

@@ -26,6 +26,6 @@
  */
 
 #import <getdns/getdns.h>
-#import <getdns/getdsn_extra.h>
+#import <getdns/getdns_extra.h>
 #import "GDNSUtil.h"
 #import "GDNSContext.h"

@@ -22,6 +22,10 @@
 		EF8D314A18C2D93400CC0AF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D312918C2D93400CC0AF7 /* UIKit.framework */; };
 		EF8D315218C2D93400CC0AF7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF8D315018C2D93400CC0AF7 /* InfoPlist.strings */; };
 		EF8D315418C2D93400CC0AF7 /* sampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8D315318C2D93400CC0AF7 /* sampleTests.m */; };
+		EF8D315E18C2D9A200CC0AF7 /* getdns.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D315D18C2D9A200CC0AF7 /* getdns.framework */; };
+		EF8D316118C2DBD600CC0AF7 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D316018C2DBD600CC0AF7 /* libresolv.dylib */; };
+		EF8D316318C2DBDB00CC0AF7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D316218C2DBDB00CC0AF7 /* CFNetwork.framework */; };
+		EF8D316518C2DBED00CC0AF7 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D316418C2DBED00CC0AF7 /* libiconv.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		EF8D314F18C2D93400CC0AF7 /* sampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sampleTests-Info.plist"; sourceTree = "<group>"; };
 		EF8D315118C2D93400CC0AF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EF8D315318C2D93400CC0AF7 /* sampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sampleTests.m; sourceTree = "<group>"; };
+		EF8D315D18C2D9A200CC0AF7 /* getdns.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = getdns.framework; path = ../../build/output/getdns.framework; sourceTree = "<group>"; };
+		EF8D316018C2DBD600CC0AF7 /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
+		EF8D316218C2DBDB00CC0AF7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EF8D316418C2DBED00CC0AF7 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +70,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8D316518C2DBED00CC0AF7 /* libiconv.dylib in Frameworks */,
+				EF8D316318C2DBDB00CC0AF7 /* CFNetwork.framework in Frameworks */,
+				EF8D316118C2DBD600CC0AF7 /* libresolv.dylib in Frameworks */,
 				EF8D312818C2D93400CC0AF7 /* CoreGraphics.framework in Frameworks */,
+				EF8D315E18C2D9A200CC0AF7 /* getdns.framework in Frameworks */,
 				EF8D312A18C2D93400CC0AF7 /* UIKit.framework in Frameworks */,
 				EF8D312618C2D93400CC0AF7 /* Foundation.framework in Frameworks */,
 			);
@@ -103,6 +115,10 @@
 		EF8D312418C2D93400CC0AF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF8D316418C2DBED00CC0AF7 /* libiconv.dylib */,
+				EF8D316218C2DBDB00CC0AF7 /* CFNetwork.framework */,
+				EF8D316018C2DBD600CC0AF7 /* libresolv.dylib */,
+				EF8D315D18C2D9A200CC0AF7 /* getdns.framework */,
 				EF8D312518C2D93400CC0AF7 /* Foundation.framework */,
 				EF8D312718C2D93400CC0AF7 /* CoreGraphics.framework */,
 				EF8D312918C2D93400CC0AF7 /* UIKit.framework */,
@@ -393,6 +409,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../build/output",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sample/sample-Prefix.pch";
 				INFOPLIST_FILE = "sample/sample-Info.plist";
@@ -406,6 +426,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../build/output",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sample/sample-Prefix.pch";
 				INFOPLIST_FILE = "sample/sample-Info.plist";

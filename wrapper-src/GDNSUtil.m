@@ -64,6 +64,9 @@ static void readCallback (CFSocketRef s,
 {
     
     GDNSContext *ctx = (__bridge GDNSContext *)info;
+    if (ctx == nil || ctx.context == NULL) {
+        return;
+    }
     struct getdns_context* context = ctx.context;
     getdns_context_process_async(context);
     uint32_t rc = getdns_context_get_num_pending_requests(context, NULL);
@@ -88,7 +91,7 @@ getdns_nsrunloop_cleanup(struct getdns_context* context, void* data) {
     struct nsrunloop_data *edata = (struct nsrunloop_data*) data;
     CFRunLoopRemoveSource(edata->runLoop, edata->source, kCFRunLoopCommonModes);
     CFRelease(edata->source);
-    CFRelease(edata->cSock);
+    //CFRelease(edata->cSock);
     free(edata);
     return GETDNS_RETURN_GOOD;
 }
@@ -121,7 +124,7 @@ static getdns_eventloop_extension nsrunloop_EXT = {
     int fd = getdns_context_fd(ctx);
     CFSocketContext theContext;
     theContext.version = 0;
-    theContext.info = (__bridge void *)(context);
+    theContext.info = (__bridge_retained void *)(context);
     theContext.retain = nil;
     theContext.release = nil;
     theContext.copyDescription = nil;
