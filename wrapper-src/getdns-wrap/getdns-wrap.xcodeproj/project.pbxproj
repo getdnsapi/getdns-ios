@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF8D30EA18C2C17900CC0AF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D30E918C2C17900CC0AF7 /* Foundation.framework */; };
+		EF8D30EF18C2C17900CC0AF7 /* getdns_wrap.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EF8D30EE18C2C17900CC0AF7 /* getdns_wrap.h */; };
+		EF8D30F118C2C17900CC0AF7 /* getdns_wrap.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8D30F018C2C17900CC0AF7 /* getdns_wrap.m */; };
+		EF8D30F818C2C17900CC0AF7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D30F718C2C17900CC0AF7 /* XCTest.framework */; };
+		EF8D30F918C2C17900CC0AF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D30E918C2C17900CC0AF7 /* Foundation.framework */; };
+		EF8D30FB18C2C17900CC0AF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D30FA18C2C17900CC0AF7 /* UIKit.framework */; };
+		EF8D30FE18C2C17A00CC0AF7 /* libgetdns-wrap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D30E618C2C17900CC0AF7 /* libgetdns-wrap.a */; };
+		EF8D310418C2C17A00CC0AF7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF8D310218C2C17A00CC0AF7 /* InfoPlist.strings */; };
+		EF8D310618C2C17A00CC0AF7 /* getdns_wrapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8D310518C2C17A00CC0AF7 /* getdns_wrapTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF8D30FC18C2C17A00CC0AF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF8D30DE18C2C17900CC0AF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF8D30E518C2C17900CC0AF7;
+			remoteInfo = "getdns-wrap";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EF8D30E418C2C17900CC0AF7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				EF8D30EF18C2C17900CC0AF7 /* getdns_wrap.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EF8D30E618C2C17900CC0AF7 /* libgetdns-wrap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libgetdns-wrap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF8D30E918C2C17900CC0AF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EF8D30ED18C2C17900CC0AF7 /* getdns-wrap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "getdns-wrap-Prefix.pch"; sourceTree = "<group>"; };
+		EF8D30EE18C2C17900CC0AF7 /* getdns_wrap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = getdns_wrap.h; sourceTree = "<group>"; };
+		EF8D30F018C2C17900CC0AF7 /* getdns_wrap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = getdns_wrap.m; sourceTree = "<group>"; };
+		EF8D30F618C2C17900CC0AF7 /* getdns-wrapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "getdns-wrapTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF8D30F718C2C17900CC0AF7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EF8D30FA18C2C17900CC0AF7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		EF8D310118C2C17A00CC0AF7 /* getdns-wrapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "getdns-wrapTests-Info.plist"; sourceTree = "<group>"; };
+		EF8D310318C2C17A00CC0AF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EF8D310518C2C17A00CC0AF7 /* getdns_wrapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = getdns_wrapTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF8D30E318C2C17900CC0AF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF8D30EA18C2C17900CC0AF7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF8D30F318C2C17900CC0AF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF8D30F818C2C17900CC0AF7 /* XCTest.framework in Frameworks */,
+				EF8D30FB18C2C17900CC0AF7 /* UIKit.framework in Frameworks */,
+				EF8D30FE18C2C17A00CC0AF7 /* libgetdns-wrap.a in Frameworks */,
+				EF8D30F918C2C17900CC0AF7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF8D30DD18C2C17900CC0AF7 = {
+			isa = PBXGroup;
+			children = (
+				EF8D30EB18C2C17900CC0AF7 /* getdns-wrap */,
+				EF8D30FF18C2C17A00CC0AF7 /* getdns-wrapTests */,
+				EF8D30E818C2C17900CC0AF7 /* Frameworks */,
+				EF8D30E718C2C17900CC0AF7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF8D30E718C2C17900CC0AF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF8D30E618C2C17900CC0AF7 /* libgetdns-wrap.a */,
+				EF8D30F618C2C17900CC0AF7 /* getdns-wrapTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF8D30E818C2C17900CC0AF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF8D30E918C2C17900CC0AF7 /* Foundation.framework */,
+				EF8D30F718C2C17900CC0AF7 /* XCTest.framework */,
+				EF8D30FA18C2C17900CC0AF7 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF8D30EB18C2C17900CC0AF7 /* getdns-wrap */ = {
+			isa = PBXGroup;
+			children = (
+				EF8D30EE18C2C17900CC0AF7 /* getdns_wrap.h */,
+				EF8D30F018C2C17900CC0AF7 /* getdns_wrap.m */,
+				EF8D30EC18C2C17900CC0AF7 /* Supporting Files */,
+			);
+			path = "getdns-wrap";
+			sourceTree = "<group>";
+		};
+		EF8D30EC18C2C17900CC0AF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF8D30ED18C2C17900CC0AF7 /* getdns-wrap-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF8D30FF18C2C17A00CC0AF7 /* getdns-wrapTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF8D310518C2C17A00CC0AF7 /* getdns_wrapTests.m */,
+				EF8D310018C2C17A00CC0AF7 /* Supporting Files */,
+			);
+			path = "getdns-wrapTests";
+			sourceTree = "<group>";
+		};
+		EF8D310018C2C17A00CC0AF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF8D310118C2C17A00CC0AF7 /* getdns-wrapTests-Info.plist */,
+				EF8D310218C2C17A00CC0AF7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF8D30E518C2C17900CC0AF7 /* getdns-wrap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF8D310918C2C17A00CC0AF7 /* Build configuration list for PBXNativeTarget "getdns-wrap" */;
+			buildPhases = (
+				EF8D30E218C2C17900CC0AF7 /* Sources */,
+				EF8D30E318C2C17900CC0AF7 /* Frameworks */,
+				EF8D30E418C2C17900CC0AF7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "getdns-wrap";
+			productName = "getdns-wrap";
+			productReference = EF8D30E618C2C17900CC0AF7 /* libgetdns-wrap.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EF8D30F518C2C17900CC0AF7 /* getdns-wrapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF8D310C18C2C17A00CC0AF7 /* Build configuration list for PBXNativeTarget "getdns-wrapTests" */;
+			buildPhases = (
+				EF8D30F218C2C17900CC0AF7 /* Sources */,
+				EF8D30F318C2C17900CC0AF7 /* Frameworks */,
+				EF8D30F418C2C17900CC0AF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF8D30FD18C2C17A00CC0AF7 /* PBXTargetDependency */,
+			);
+			name = "getdns-wrapTests";
+			productName = "getdns-wrapTests";
+			productReference = EF8D30F618C2C17900CC0AF7 /* getdns-wrapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF8D30DE18C2C17900CC0AF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = getdnsapi;
+			};
+			buildConfigurationList = EF8D30E118C2C17900CC0AF7 /* Build configuration list for PBXProject "getdns-wrap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EF8D30DD18C2C17900CC0AF7;
+			productRefGroup = EF8D30E718C2C17900CC0AF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF8D30E518C2C17900CC0AF7 /* getdns-wrap */,
+				EF8D30F518C2C17900CC0AF7 /* getdns-wrapTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF8D30F418C2C17900CC0AF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF8D310418C2C17A00CC0AF7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF8D30E218C2C17900CC0AF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF8D30F118C2C17900CC0AF7 /* getdns_wrap.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF8D30F218C2C17900CC0AF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF8D310618C2C17A00CC0AF7 /* getdns_wrapTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF8D30FD18C2C17A00CC0AF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF8D30E518C2C17900CC0AF7 /* getdns-wrap */;
+			targetProxy = EF8D30FC18C2C17A00CC0AF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF8D310218C2C17A00CC0AF7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF8D310318C2C17A00CC0AF7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF8D310718C2C17A00CC0AF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EF8D310818C2C17A00CC0AF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF8D310A18C2C17A00CC0AF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/getdns_wrap.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "getdns-wrap/getdns-wrap-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EF8D310B18C2C17A00CC0AF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/getdns_wrap.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "getdns-wrap/getdns-wrap-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EF8D310D18C2C17A00CC0AF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "getdns-wrap/getdns-wrap-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "getdns-wrapTests/getdns-wrapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EF8D310E18C2C17A00CC0AF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "getdns-wrap/getdns-wrap-Prefix.pch";
+				INFOPLIST_FILE = "getdns-wrapTests/getdns-wrapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF8D30E118C2C17900CC0AF7 /* Build configuration list for PBXProject "getdns-wrap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF8D310718C2C17A00CC0AF7 /* Debug */,
+				EF8D310818C2C17A00CC0AF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF8D310918C2C17A00CC0AF7 /* Build configuration list for PBXNativeTarget "getdns-wrap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF8D310A18C2C17A00CC0AF7 /* Debug */,
+				EF8D310B18C2C17A00CC0AF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF8D310C18C2C17A00CC0AF7 /* Build configuration list for PBXNativeTarget "getdns-wrapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF8D310D18C2C17A00CC0AF7 /* Debug */,
+				EF8D310E18C2C17A00CC0AF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF8D30DE18C2C17900CC0AF7 /* Project object */;
+}
