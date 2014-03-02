@@ -6,8 +6,9 @@ iOS Framework and sample project for getdns
 Building the Framework
 ----------------------
 
-Requirements
- - XCode 5.0
+Requirements (i.e. build env tested on)
+
+ - XCode 5.0 with command line tools
  - OSX 10.9
  - iOS 7.0 SDK
 
