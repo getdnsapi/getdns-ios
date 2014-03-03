@@ -42,7 +42,7 @@ do
     ./build-static-lib.sh $LIBUNBOUND_DIR $ARCH $LIBUNBOUND_CHECK_LIB \
        --with-ssl="${INSTALL_PREFIX}/${ARCH}" \
        --with-ldns="${INSTALL_PREFIX}/${ARCH}" \
-       --with-expat="${INSTALL_PREFIX}/${ARCH}"
+       --with-libexpat="${INSTALL_PREFIX}/${ARCH}"
 done
 
 # verify
