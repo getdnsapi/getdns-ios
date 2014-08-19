@@ -43,7 +43,8 @@ then
 else
     PLATFORM="iPhoneOS"
     SDK="iphoneos"
-    EXTRA_FLAGS="-mthumb-interwork"
+    #EXTRA_FLAGS="-mthumb-interwork"
+    EXTRA_FLAGS=""
 fi
 
 if [ "${ARCH}" == "arm64" ];
